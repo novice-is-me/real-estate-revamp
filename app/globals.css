@@ -38,30 +38,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-@layer components {
-  .text-highlight {
-    color: var(--accent);
-  }
-}
-
-body {
-  font-family: var(--font-roboto), sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-lora), serif;
-}
-
-p,
-a {
-  font-family: var(--font-roboto), sans-serif;
-}
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -144,4 +120,41 @@ a {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  .text-highlight {
+    color: var(--accent);
+  }
+
+  .background-image {
+    background-image: url("/background.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    border-radius: var(--radius);
+  }
+
+  .blur-bg {
+    @apply bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300;
+  }
+}
+
+body {
+  font-family: var(--font-roboto), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-lora), serif;
+  font-weight: bold;
+}
+
+p,
+a {
+  font-family: var(--font-roboto), sans-serif;
 }

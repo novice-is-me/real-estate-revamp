@@ -14,7 +14,9 @@ const page = () => {
     <main>
       <Navbar />
 
-      <Hero />
+      <div className="background-image">
+        <Hero />
+      </div>
       <Search />
       <Featured />
       <Gallery />

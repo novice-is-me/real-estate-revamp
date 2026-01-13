@@ -1,6 +1,7 @@
 "use client";
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -40,7 +41,7 @@ const Navbar = () => {
         <div className=" hidden md:block">
           {tabs.map((tab, index) => (
             <div key={index} className="inline-block mx-4">
-              <a href={tab.link}>{tab.name}</a>
+              <Link href={tab.link}>{tab.name}</Link>
             </div>
           ))}
         </div>
