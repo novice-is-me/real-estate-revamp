@@ -138,6 +138,10 @@
   .blur-bg {
     @apply bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300;
   }
+
+  .dark-bg {
+    background-color: #212D45; 
+  }
 }
 
 body {

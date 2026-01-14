@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
 
         {/* Description section */}
-        <div className="space-y-3 max-w-2xl">
+        <div className=" max-w-2xl">
           <p className="text-lg text-white leading-relaxed drop-shadow-lg">
             We specialize in luxury properties and personalized real estate
             experiences.

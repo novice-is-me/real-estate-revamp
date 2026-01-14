@@ -17,7 +17,9 @@ const page = () => {
       <div className="background-image">
         <Hero />
       </div>
-      <Search />
+      <div className=" dark-bg">
+        <Search />
+      </div>
       <Featured />
       <Gallery />
       <Services />
