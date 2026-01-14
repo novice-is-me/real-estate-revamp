@@ -20,7 +20,7 @@ const page = () => {
       <div className=" dark-bg">
         <Search />
       </div>
-      <Featured />
+      {/* <Featured /> */}
       <Gallery />
       <Services />
       <About />

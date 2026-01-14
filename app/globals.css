@@ -142,6 +142,10 @@
   .dark-bg {
     background-color: #212D45; 
   }
+
+  .dark-text{
+    color: #212D45; 
+  }
 }
 
 body {

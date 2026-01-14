@@ -39,7 +39,7 @@ const Search = () => {
   return (
     <section className="">
       <div className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 text-white">
           <h1 className="text-4xl font-bold mb-6">
             Find Your Perfect Property
           </h1>
