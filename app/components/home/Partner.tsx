@@ -1,21 +1,51 @@
 "use client";
-import React from "react";
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
+
+const logos = [
+  "/partner1.png",
+  "/partner2.png",
+  "/partner3.png",
+  "/partner4.png",
+];
 
 const Partner = () => {
   return (
-    <section>
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8">
-        <div className="  flex justify-center flex-col items-center space-y-6 text-center max-w-3xl mx-auto">
-          <p className="dark-text border rounded-full  px-4 py-2 dark-bg text-white">
-            Partner Listings
-          </p>
+    <section className="dark-bg overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <Marquee speed={80} gradient={false} pauseOnHover={false}>
+          <div className="flex items-center whitespace-nowrap">
+            {/* First set */}
+            {logos.map((src, i) => (
+              <div key={`a-${i}`} className="mx-12">
+                <Image
+                  src={src}
+                  alt={`partner-${i}`}
+                  width={140}
+                  height={80}
+                  className="object-contain bg-white"
+                  priority
+                />
+              </div>
+            ))}
 
-          <h1 className=" text-4xl font-bold">Exceptional Properties</h1>
-          <p>
-            Discover our handpicked selection of premium properties, each
-            offering unique features and unparalleled luxury.
-          </p>
-        </div>
+            {/* Spacer between last & first */}
+            <div className="w-32" />
+
+            {/* Second set (manual duplicate) */}
+            {logos.map((src, i) => (
+              <div key={`b-${i}`} className="mx-12">
+                <Image
+                  src={src}
+                  alt={`partner-${i}`}
+                  width={140}
+                  height={80}
+                  className="object-contain bg-white"
+                />
+              </div>
+            ))}
+          </div>
+        </Marquee>
       </div>
     </section>
   );
