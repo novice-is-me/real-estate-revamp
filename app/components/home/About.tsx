@@ -41,7 +41,7 @@ const About = () => {
                 Marci J Metzger
               </h1>
               <div className="flex items-center justify-center lg:justify-start space-x-2">
-                <p className="text-lg text-white/90 font-medium italic">
+                <p className="text-lg text-white/90 font-medium">
                   REALTOR for Nearly Three Decades
                 </p>
               </div>
@@ -49,32 +49,12 @@ const About = () => {
 
             {/* Content */}
             <div className="space-y-6 text-white">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <p className="text-base leading-relaxed">
+              <div className="">
+                <p className="text-base leading-relaxed text-white/80 italic">
                   Marci was a REALTOR, then licensed Broker, in Washington
                   State. Now, she is enjoying the sunshine, and helping clients
                   in Southern Nevada. Having helped buyers and sellers in many
                   markets since 1995, she is a wealth of knowledge.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative">
-                {/* Quote decoration */}
-                <div className="absolute top-4 left-4 text-4xl text-white/20 font-serif">
-                  "
-                </div>
-                <div className="absolute bottom-4 right-4 text-4xl text-white/20 font-serif">
-                  "
-                </div>
-
-                <p className="text-base leading-relaxed italic pl-8 pr-8">
-                  I love that small-town feeling that our community offers.
-                  Spectacular golf courses, parks, pool, and easy access to Las
-                  Vegas make Pahrump a great place to call home. Working or
-                  retired, fast-paced or looking to relax... there's a place for
-                  you here! I enjoy living in the Mountain Falls community and
-                  will strive to find you a home that will suit you just as this
-                  community does me.
                 </p>
               </div>
             </div>
