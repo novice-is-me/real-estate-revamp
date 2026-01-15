@@ -1,14 +1,12 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
-        port: "",
-        pathname: "/**",
+        hostname: "randomuser.me",
+        pathname: "/api/portraits/**", // allow all images under /api/portraits
       },
     ],
   },
