@@ -72,6 +72,7 @@ const Hero = () => {
                   className="rounded-full border-3 border-white object-cover"
                   width={35}
                   height={35}
+                  unoptimized
                 />
                 <Image
                   src="https://randomuser.me/api/portraits/men/32.jpg"
@@ -79,6 +80,7 @@ const Hero = () => {
                   className="rounded-full border-3 border-white object-cover"
                   width={35}
                   height={35}
+                  unoptimized
                 />
                 <Image
                   src="https://randomuser.me/api/portraits/women/68.jpg"
@@ -86,6 +88,7 @@ const Hero = () => {
                   className=" rounded-full border-3 border-white object-cover"
                   width={35}
                   height={35}
+                  unoptimized
                 />
               </div>
               <span className="text-sm font-medium drop-shadow-lg">
