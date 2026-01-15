@@ -10,35 +10,35 @@ const Footer = () => {
     {
       name: "facebook",
       icon: FaFacebook,
-      href: "https://www.facebook.com/marci.metzger.7",
+      href: "https://www.facebook.com/MarciHomes/",
     },
     {
       name: "Instagram",
       icon: FaInstagram,
-      href: "#",
+      href: "https://www.instagram.com/marciandlauren_nvrealtors/",
     },
     {
       name: "Linkedin",
       icon: FaLinkedin,
-      href: "#",
+      href: "https://www.linkedin.com/in/marci-metzger-30642496/",
     },
     {
       name: "Yelp",
       icon: FaYelp,
-      href: "#",
+      href: "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
     },
   ];
 
   const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "Search Listing", href: "/" },
-    { name: "Gallery", href: "/" },
-    { name: "Services", href: "/" },
-    { name: "About", href: "/" },
-    { name: "Contact", href: "/" },
+    { name: "Home", href: "#home" },
+    { name: "Search Listing", href: "#search" },
+    { name: "Gallery", href: "#gallery" },
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
   return (
-    <footer className=" dark-bg border-t border-gray-700">
+    <footer className=" dark-bg border-t border-gray-700" id="footer">
       <div className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8 text-white/50">
         <div className=" grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* First col */}
@@ -80,6 +80,7 @@ const Footer = () => {
                     href={link.href}
                     key={index}
                     className=" mr-4 inline-block"
+                    target="_blank"
                   >
                     <Icon className=" w-6 h-6 hover:text-blue-500 transition-colors duration-300" />
                   </Link>

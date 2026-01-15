@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import {
   Select,
@@ -14,14 +16,6 @@ import { Button } from "@/components/ui/button";
 import { SearchIcon } from "lucide-react";
 
 const Search = () => {
-  const [location, setLocation] = useState("");
-  const [propertyType, setPropertyType] = useState("");
-  const [minPrice, setMinPrice] = useState("Any");
-  const [maxPrice, setMaxPrice] = useState("Any");
-  const [bedrooms, setBedrooms] = useState("Any");
-  const [bathrooms, setBathrooms] = useState("Any");
-  const [sortBy, setSortBy] = useState(["Newest"]);
-
   const countries = getNames();
   const propertyTypes = ["House", "Apartment", "Condo", "Townhouse", "Villa"];
   const sortByOptions = [
@@ -36,9 +30,23 @@ const Search = () => {
   ];
 
   const numbers = Array.from({ length: 5 }, (_, i) => i + 1);
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   return (
-    <section className="">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8">
+    <section id="search" className=" dark-bg">
+      <div
+        className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8"
+        data-aos="fade-up-right"
+        data-aos-duration="2000"
+      >
         <div className="text-center mb-10 text-white">
           <h1 className="text-4xl font-bold mb-6">
             Find Your Perfect Property

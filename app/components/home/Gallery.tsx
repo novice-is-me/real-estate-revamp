@@ -1,6 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Masonry from "@/components/Masonry";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Gallery = () => {
   const items = [
@@ -40,9 +42,23 @@ const Gallery = () => {
       height: 500, // tall
     },
   ];
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   return (
-    <section className="">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8">
+    <section id="gallery">
+      <div
+        className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8"
+        data-aos="fade-up-right"
+        data-aos-duration="2000"
+      >
         <div className="  flex justify-center flex-col items-center space-y-6 text-center max-w-3xl mx-auto">
           <p className="dark-text border rounded-full  px-4 py-2 dark-bg text-white">
             Interior Showcase

@@ -1,12 +1,26 @@
 "use client";
 import CountUp from "@/components/CountUp";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
   return (
-    <section className="dark-bg overflow-hidden relative">
-      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:py-24 lg:px-8">
+    <section className="dark-bg overflow-hidden relative" id="about">
+      <div
+        className="relative mx-auto max-w-7xl px-6 py-20 lg:py-24 lg:px-8"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-16 lg:gap-20 items-center">
           {/* Image Section */}
           <div className="order-2 lg:order-1 flex justify-center">

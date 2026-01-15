@@ -14,12 +14,8 @@ const page = () => {
     <main>
       <Navbar />
 
-      <div className="background-image">
-        <Hero />
-      </div>
-      <div className=" dark-bg">
-        <Search />
-      </div>
+      <Hero />
+      <Search />
       <Gallery />
       <Partner />
       <Services />

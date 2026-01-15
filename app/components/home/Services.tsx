@@ -1,7 +1,9 @@
 "use client";
 import { title } from "process";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
   const cardData = [
@@ -24,8 +26,22 @@ const Services = () => {
       src: "/service-image3.png",
     },
   ];
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
   return (
-    <section className="bg-gray-50 py-16 md:py-24">
+    <section
+      className="bg-gray-50 py-16 md:py-24"
+      id="services"
+      data-aos="fade-up-right"
+      data-aos-duration="2000"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

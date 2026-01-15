@@ -5,29 +5,19 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const [tabs, setTabs] = useState<object[]>([
-    {
-      name: "Home",
-      link: "#",
-    },
-    { name: "Search", link: "/search" },
-    {
-      name: "Featured",
-      link: "#featured",
-    },
-    {
-      name: "Gallery",
-      link: "#gallery",
-    },
+
+  const tabs = [
+    { name: "Home", link: "#home" },
+    { name: "Gallery", link: "#gallery" },
     { name: "Services", link: "#services" },
     { name: "About", link: "#about" },
     { name: "Contact", link: "#contact" },
-  ]);
+  ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav>
+    <nav className=" sticky top-0 z-50 bg-white ">
       <div className=" mx-auto max-w-7xl px-4 flex h-25 items-center justify-between ">
         <Image
           src="/logo.png"

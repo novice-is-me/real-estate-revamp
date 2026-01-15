@@ -11,7 +11,7 @@ const logos = [
 
 const Partner = () => {
   return (
-    <section className="dark-bg overflow-hidden">
+    <section className="dark-bg overflow-hidden" id="partner">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <Marquee speed={80} gradient={false} pauseOnHover={false}>
           <div className="flex items-center whitespace-nowrap">

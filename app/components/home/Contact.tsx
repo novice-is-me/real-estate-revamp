@@ -23,8 +23,12 @@ const Contact = () => {
     },
   ];
   return (
-    <section>
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8">
+    <section id="contact">
+      <div
+        className="mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
         <div className="  flex justify-center flex-col items-center space-y-6 text-center max-w-3xl mx-auto">
           <p className="dark-text border rounded-full  px-4 py-2 dark-bg text-white">
             Get in Touch
