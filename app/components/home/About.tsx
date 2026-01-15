@@ -1,7 +1,104 @@
+"use client";
+import CountUp from "@/components/CountUp";
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <section className="dark-bg overflow-hidden relative">
+      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:py-24 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-16 lg:gap-20 items-center">
+          {/* Image Section */}
+          <div className="order-2 lg:order-1 flex justify-center">
+            <div className="relative group hidden md:block">
+              {/* Decorative background */}
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-300 transform group-hover:scale-105 ">
+                <Image
+                  src="/owner.png"
+                  alt="Marci J Metzger - Professional Realtor"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="order-1 lg:order-2 space-y-8">
+            {/* Badge */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-flex text-ce items-center px-6 py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+                <span className="text-white font-medium tracking-wide">
+                  Meet The Realtor
+                </span>
+              </div>
+            </div>
+
+            {/* Header */}
+            <div className="text-center lg:text-left space-y-3">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Marci J Metzger
+              </h1>
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                <p className="text-lg text-white/90 font-medium italic">
+                  REALTOR for Nearly Three Decades
+                </p>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="space-y-6 text-white">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <p className="text-base leading-relaxed">
+                  Marci was a REALTOR, then licensed Broker, in Washington
+                  State. Now, she is enjoying the sunshine, and helping clients
+                  in Southern Nevada. Having helped buyers and sellers in many
+                  markets since 1995, she is a wealth of knowledge.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative">
+                {/* Quote decoration */}
+                <div className="absolute top-4 left-4 text-4xl text-white/20 font-serif">
+                  "
+                </div>
+                <div className="absolute bottom-4 right-4 text-4xl text-white/20 font-serif">
+                  "
+                </div>
+
+                <p className="text-base leading-relaxed italic pl-8 pr-8">
+                  I love that small-town feeling that our community offers.
+                  Spectacular golf courses, parks, pool, and easy access to Las
+                  Vegas make Pahrump a great place to call home. Working or
+                  retired, fast-paced or looking to relax... there's a place for
+                  you here! I enjoy living in the Mountain Falls community and
+                  will strive to find you a home that will suit you just as this
+                  community does me.
+                </p>
+              </div>
+            </div>
+
+            {/* Stats or additional info could go here */}
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              <div className="text-center lg:text-left">
+                <div className="text-4xl font-bold text-white">
+                  <CountUp from={0} to={30} className=" count-up-text" /> +
+                </div>
+                <div className="text-sm text-white/70">Years Experience</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-4xl font-bold text-white">
+                  <CountUp from={0} to={100} className=" count-up-text" /> +
+                </div>
+                <div className="text-sm text-white/70">Happy Families</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;
